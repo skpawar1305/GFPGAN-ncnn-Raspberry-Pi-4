@@ -388,6 +388,9 @@ void Face::draw_objects(const cv::Mat& bgr, const std::vector<Object>& objects)
                     cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
     }
 
+#ifndef __ANDROID__
     cv::imshow("image", image);
     cv::waitKey();
+#endif
+
 }
